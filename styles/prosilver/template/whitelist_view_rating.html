@@ -1,0 +1,32 @@
+<div class="whitelist_rules">
+	<!-- IF S_TRADER_EXISTS -->
+	<br/>
+	<strong>{L_RATING_OF} <a href="{VIEW_RATING_PROFILE}">{VIEW_RATING_USERNAME}</a>:&nbsp;&nbsp;&nbsp;</strong>
+		<strong><span style="color: green">{L_POSITIV}: {VIEW_RATING_POSITIV}</span> -
+		<span style="color: grey">{L_NEUTRAL}: {VIEW_RATING_NEUTRAL}</span> -
+		<span style="color: red">{L_NEGATIV}: {VIEW_RATING_NEGATIV}</span></strong>
+		<br/><br/>
+		<table class="table1" cellspacing="1">
+			<tr>
+				<th>{L_TIME}</th>
+				<th>{L_FROM}</th>
+				<th>{L_RATING}</th>
+				<th>{L_COMMENT}</th>
+				<th>{L_TRADER}</th>
+				<!-- IF U_ACP --><th>{L_ACTIONS}</th><!-- ENDIF -->
+			</tr>
+			<!-- BEGIN ratings -->
+			<tr class="<!-- IF ratings.S_ROW_COUNT is even -->bg1<!-- ELSE -->bg2<!-- ENDIF -->">
+				<td>{ratings.TIME}</td>
+				<td><a href="{ratings.PROFILE_FROM}">{ratings.RATERNAME}</a></td>
+				<td>{ratings.RATING}</td>
+				<td>{ratings.COMMENT}</td>
+				<td><a href="{ratings.PROFILE_TRADER}">{ratings.TRADERNAME}</a></td>
+				<!-- IF U_ACP --><td>{ratings.ACTIONS}</td><!-- ENDIF -->
+			</tr>
+			<!-- END ratings -->
+		</table>
+	<!-- ELSE -->
+	<span style="color: red; font-size:12px">{ERROR_MSG}</span>
+	<!-- ENDIF -->
+</div>

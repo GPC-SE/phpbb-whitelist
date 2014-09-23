@@ -1,0 +1,27 @@
+{
+	"name": "gpc/whitelist",
+	"type": "phpbb-extension",
+	"description": "Adds a whitelist for rating users +1/0/-1.",
+	"homepage": "http://www.penspinning.de",
+	"version": "0.1.0",
+	"time": "2014-09-30",
+	"keywords": ["phpbb", "extension", "gpc", "whitelist"],
+	"license": "GPL-2.0",
+	"authors": [
+		{
+			"name": "Robert Heim",
+			"homepage": "http://blog.robert-heim.de",
+			"email": "robert@robert-heim.de",
+			"role": "Lead Developer"
+		}
+	],
+	"require": {
+		"php": ">=5.3.3"
+	},
+	"extra": {
+		"display-name": "GPC Whitelist",
+		"soft-require": {
+			"phpbb/phpbb": "3.1.*"
+		}
+	}
+}

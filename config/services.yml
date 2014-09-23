@@ -1,0 +1,22 @@
+services:
+    gpc.whitelist.controller:
+        class: gpc\whitelist\controller\main
+        arguments:
+            - @config
+            - @controller.helper
+            - @template
+            - @user
+            - @auth
+            - @request
+            - @dbal.conn
+            - %core.php_ext%
+            - %core.root_path%
+            - %core.table_prefix%
+            - @pagination
+    gpc.whitelist.listener:
+        class: gpc.whitelist\event\main_listener
+        arguments:
+            - @controller.helper
+            - @template
+        tags:
+            - { name: event.listener }

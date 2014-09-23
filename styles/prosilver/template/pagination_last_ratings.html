@@ -1,0 +1,18 @@
+<div class="pagination">
+{ON_PAGE_LAST_RATINGS}
+<ul>
+<!-- BEGIN PAGINATION_LAST_RATINGS -->
+	<!-- IF PAGINATION_LAST_RATINGS.S_IS_PREV -->
+	<li class="previous"><a href="{PAGINATION_LAST_RATINGS.PAGE_URL}" rel="prev" role="button">{L_PREVIOUS}</a></li>
+	<!-- ELSEIF PAGINATION_LAST_RATINGS.S_IS_CURRENT -->
+	<li class="active"><span>{PAGINATION_LAST_RATINGS.PAGE_NUMBER}</span></li>
+	<!-- ELSEIF PAGINATION_LAST_RATINGS.S_IS_ELLIPSIS -->
+	<li class="ellipsis" role="separator"><span>{L_ELLIPSIS}</span></li>
+	<!-- ELSEIF PAGINATION_LAST_RATINGS.S_IS_NEXT -->
+	<li class="next"><a href="{PAGINATION_LAST_RATINGS.PAGE_URL}" rel="next" role="button">{L_NEXT}</a></li>
+	<!-- ELSE -->
+	<li><a href="{PAGINATION_LAST_RATINGS.PAGE_URL}" role="button">{PAGINATION_LAST_RATINGS.PAGE_NUMBER}</a></li>
+	<!-- ENDIF -->
+<!-- END PAGINATION_LAST_RATINGS -->
+</ul>
+</div>

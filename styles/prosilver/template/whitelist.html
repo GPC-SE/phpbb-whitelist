@@ -1,0 +1,177 @@
+<!-- INCLUDE overall_header.html -->
+
+<style type="text/css">
+.whitelist_rules
+{
+	font-size:12px;
+}
+.whitelist_rules li {
+	list-style-type: inherit;
+}
+
+.whitelist_rules ul, .whitelist_rules ol {
+	margin-bottom: 1em;
+	margin-left: 3em;
+}
+</style>
+
+<h3>{L_WHITELIST} - {L_WHATS_THAT}</h3>
+<div>
+{L_WHATS_THAT_DESC}
+</div>
+
+<!-- IF S_VIEW_RATE_BLOCK -->
+<h3>{L_RATE_TRADE} - <span style="display: none; text-transform:none; font-weight:normal" id="rate_trade_box_btn" onClick="if (document.getElementById('rate_trade_box').style.display != '') {  document.getElementById('rate_trade_box').style.display = ''; this.innerHTML = '<a href=\'#\' onClick=\'return false;\'>{L_HIDE}</a>'; } else { document.getElementById('rate_trade_box').style.display = 'none'; this.innerHTML = '<a href=\'#\' onClick=\'return false;\'>{L_SHOW}</a>'; }" /><a href="#" onClick="return false;" class="postlink-local">{L_SHOW}</a></span></h3>
+<!-- IF S_RATED --><!-- INCLUDE whitelist_rated.html --><!-- ENDIF -->
+<div id="rate_trade_box">
+	<br/>
+	<h4 style="color: red; text-decoration: underline;">{L_RULES_HEAD}</h4>
+
+	<div class="whitelist_rules">{L_RULES}</div>
+	<br/>
+	<br/>
+	<form id="rate_trade_form" method="post" action="{RATE_TRADE_ACTION}">
+		<div class="panel">
+			<div class="inner"><span class="corners-top"><span></span></span>
+		
+				<h3>{L_RATE_TRADE}</h3>
+				<fieldset class="fields1">
+					<dl>
+						<dt><label for="user">{L_TRADE_PARTNER}:</label></dt>
+						<dd><input type="text" class="inputbox" name="tradepartner" id="user" size="30" title="{L_SEARCH_TRADEPARTNER}" /><br/>
+							<strong><a href="{U_FIND_USERNAME}" onclick="find_username(this.href); return false;">{L_FIND_USERNAME}</a></strong></dd>
+					</dl>
+					<dl>
+						<dt><label for="user">{L_COMMENT}:</label></dt>
+						<dd><input type="text" class="inputbox" name="comment" size="30" title="{L_COMMENT}" maxlength="255"/><br/></dd>
+					</dl>
+					<dl>
+						<dt><label for="rating">{L_RATING}:</label></dt>
+						<dd>
+							<input type="radio" name="rating" value="pos">{L_POSITIV}<br/>
+							<input type="radio" name="rating" value="neut">{L_NEUTRAL}<br/>
+							<input type="radio" name="rating" value="neg">{L_NEGATIV}	
+						</dd>
+					</dl>
+				</fieldset>
+				<fieldset class="submit-buttons">
+					<input type="submit" name="submit" value="{L_RATE_TRADE}" class="button1" />
+				</fieldset>
+				<span class="corners-bottom"><span></span></span>
+			</div>
+		</div>
+	</form>
+</div>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+	document.getElementById('rate_trade_box_btn').style.display='';
+	document.getElementById('rate_trade_box').style.display='none';
+-->
+</script>
+<!-- ENDIF -->
+
+<!-- view rating of user -->
+<h3>{L_VIEW_RATING_OF_USER} - <span style="display: none; text-transform:none; font-weight:normal" id="show_rating_box_btn" onClick="if (document.getElementById('show_rating_box').style.display != '') {  document.getElementById('show_rating_box').style.display = ''; this.innerHTML = '<a href=\'#\' onClick=\'return false;\'>{L_HIDE}</a>'; } else { document.getElementById('show_rating_box').style.display = 'none'; this.innerHTML = '<a href=\'#\' onClick=\'return false;\'>{L_SHOW}</a>'; }" /><a href="#" onClick="return false;" class="postlink-local">{L_SHOW}</a></span></h3>
+<div id="show_rating_box">
+	<br/>
+	<form id="show_rating_form" method="post" action="{VIEW_RATING_ACTION}">
+		<div class="panel">
+			<div class="inner"><span class="corners-top"><span></span></span>
+				<h3>{L_VIEW_RATING_OF_USER}</h3>
+				<fieldset class="fields1">
+					<dl>
+						<dt><label for="user">{L_TRADER}:</label></dt>
+						<dd><input type="text" class="inputbox" name="trader" id="trader" size="30" title="{L_SEARCH_TRADEPARTNER}" /><br/>
+							<strong><a href="{U_FIND_TRADER}" onclick="find_username(this.href); return false;">{L_FIND_USERNAME}</a></strong></dd>
+					</dl>
+				</fieldset>
+				<fieldset class="submit-buttons">
+					<input type="submit" name="submit" value="{L_VIEW_RATING}" class="button1" />
+				</fieldset>
+				<span class="corners-bottom"><span></span></span>
+			</div>
+		</div>
+	</form>
+</div>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+	document.getElementById('show_rating_box_btn').style.display='';
+	document.getElementById('show_rating_box').style.display='none';
+-->
+</script>
+<!-- IF S_VIEW_RATING --><!-- INCLUDE whitelist_view_rating.html --><!-- ENDIF -->
+<!-- IF S_DELETE_RATING -->
+<div>
+	<!-- IF S_DELETE_RATING_SUCCESS -->
+	<span style="color: green; font-size:12px">{DELETE_RATING_SUCCESS_MSG}</span>
+	<!-- ELSE -->
+	<span style="color: red; font-size:12px">{DELETE_RATING_ERROR_MSG}</span>
+	<!-- ENDIF -->
+</div>
+<!-- ENDIF -->
+
+<h3>{L_LAST_RATINGS}<!-- IF not S_LAST_RATINGS --> - <span style="text-transform:none; font-weight:normal"><a href="{LINK_LAST_RATINGS}">{L_SHOW}</a></span><!-- ENDIF --></h3>
+<!-- IF S_LAST_RATINGS -->
+
+<!-- INCLUDE pagination_last_ratings.html -->
+
+<table class="table1" cellspacing="1">
+	<tr>
+		<th>{L_TIME}</th>
+		<th>{L_FROM}</th>
+		<th>{L_RATING}</th>
+		<th>{L_COMMENT}</th>
+		<th>{L_TRADER}</th>
+		<th>{L_POSITIV}</th>
+		<th>{L_NEUTRAL}</th>
+		<th>{L_NEGATIV}</th>
+	</tr>
+	<!-- BEGIN last_ratings -->
+	<tr class="<!-- IF last_ratings.S_ROW_COUNT is even -->bg1<!-- ELSE -->bg2<!-- ENDIF -->">
+		<td>{last_ratings.TIME}</td>
+		<td><a href="{last_ratings.PROFILE_FROM}">{last_ratings.RATERNAME}</a></td>
+		<td>{last_ratings.RATING}</td>
+		<td>{last_ratings.COMMENT}</td>
+		<td><strong><a href="{last_ratings.PROFILE_TRADER}">{last_ratings.TRADERNAME}</a></strong></td>
+		<td>{last_ratings.POSITIV}</td>
+		<td>{last_ratings.NEUTRAL}</td>
+		<td>{last_ratings.NEGATIV}</td>
+	</tr>
+	<!-- END last_ratings -->
+</table>
+
+<!-- INCLUDE pagination_last_ratings.html -->
+
+<!-- ENDIF -->
+
+<h3>{L_WHITELIST}<!-- IF not S_SHOW_WHITELIST --> - <span style="text-transform:none; font-weight:normal"><a href="{LINK_SHOW_WHITELIST}">{L_SHOW}</a></span><!-- ENDIF --></h3>
+
+<!-- IF S_SHOW_WHITELIST -->
+
+<!-- INCLUDE whitelist_rated.html -->
+
+<!-- INCLUDE pagination.html -->
+
+<table class="table1" cellspacing="1">
+	<tr>
+		<th>{L_USER}</th>
+		<th>{L_POSITIV}</th>
+		<th>{L_NEUTRAL}</th>
+		<th>{L_NEGATIV}</th>
+	</tr>
+	<!-- BEGIN whitelist -->
+	<tr class="<!-- IF whitelist.S_ROW_COUNT is even -->bg1<!-- ELSE -->bg2<!-- ENDIF -->">
+		<td><a href="{whitelist.PROFILE}">{whitelist.USERNAME}</a></td>
+		<td>{whitelist.POSITIV}</td>
+		<td>{whitelist.NEUTRAL}</td>
+		<td>{whitelist.NEGATIV}</td>
+	</tr>
+	<!-- END whitelist -->
+</table>
+
+<!-- INCLUDE pagination.html -->
+<!-- ENDIF -->
+
+<!-- INCLUDE overall_footer.html -->
