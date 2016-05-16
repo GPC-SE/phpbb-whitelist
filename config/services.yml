@@ -14,7 +14,7 @@ services:
             - %core.table_prefix%
             - @pagination
     gpc.whitelist.listener:
-        class: gpc.whitelist\event\main_listener
+        class: gpc\whitelist\event\main_listener
         arguments:
             - @controller.helper
             - @template
