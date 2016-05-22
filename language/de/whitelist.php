@@ -9,16 +9,16 @@
 
 if (!defined('IN_PHPBB'))
 {
-    exit;
+	exit;
 }
 
 if (empty($lang) || !is_array($lang))
 {
-    $lang = array();
+	$lang = array();
 }
 
 $lang = array_merge($lang, array(
-    'WHITELIST'						=> 'Whitelist',
+	'WHITELIST'						=> 'Whitelist',
 	'POSITIV'						=> 'positiv',
 	'NEUTRAL'						=> 'neutral',
 	'NEGATIV'						=> 'negativ',
@@ -79,4 +79,3 @@ $lang = array_merge($lang, array(
 	'WHITELIST_PM_GOT_ENTRY_SUBJECT'	=> 'Du hast einen %sen Eintrag in der Whitelist bekommen!',
 	'WHITELIST_PM_GOT_ENTRY_MSG'	=> "Hallo,\n\n%s hat dir einen %sen Eintrag in der Whitelist gegeben.\n\nDiese Nachricht wurde automatisch generiert.\n\nViele Grüße\nGPC-Team",
 ));
-?>

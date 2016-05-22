@@ -20,38 +20,38 @@ class release_1_0_0 extends \phpbb\db\migration\migration
 	{
 		return array(
 			'add_columns'	=> array(
-                $this->table_prefix . 'users'   => array(
-                    'whitelist_positiv'	        => array('UINT', 0),
-                    'whitelist_neutral'	        => array('UINT', 0),
-                    'whitelist_negativ'	        => array('UINT', 0),
-                ),
-            ),
+				$this->table_prefix . 'users'   => array(
+					'whitelist_positiv'	        => array('UINT', 0),
+					'whitelist_neutral'	        => array('UINT', 0),
+					'whitelist_negativ'	        => array('UINT', 0),
+				),
+			),
 			'add_tables'    => array(
-	            $this->table_prefix . 'whitelist_ratings' => array(
-	                'COLUMNS'	=> array(
-	                    'trade_id'	=> array('UINT', NULL, 'auto_increment'),
-	                    'rater_id'	=> array('UINT', NULL),
-	                    'trader_id'	=> array('UINT', NULL),
-	                    'rating'	=> array('TINT:2', NULL),
-	                    'rate_time'	=> array('TIMESTAMP', NULL),
-	                    'comment'	=> array('VCHAR:255', ''),
-	                ),
-	                'PRIMARY_KEY'	=> 'trade_id',
-	            ),
+				$this->table_prefix . 'whitelist_ratings' => array(
+					'COLUMNS'	=> array(
+						'trade_id'	=> array('UINT', NULL, 'auto_increment'),
+						'rater_id'	=> array('UINT', NULL),
+						'trader_id'	=> array('UINT', NULL),
+						'rating'	=> array('TINT:2', NULL),
+						'rate_time'	=> array('TIMESTAMP', NULL),
+						'comment'	=> array('VCHAR:255', ''),
+					),
+					'PRIMARY_KEY'	=> 'trade_id',
+				),
 			),
 		);
 	}
 
 	public function revert_schema()
 	{
-	    return array(
+		return array(
 			'drop_columns'	=> array(
-                $this->table_prefix . 'users' => array(
-                    'whitelist_positiv',
-                    'whitelist_neutral',
-                    'whitelist_negativ',
-                ),
-            ),
+				$this->table_prefix . 'users' => array(
+					'whitelist_positiv',
+					'whitelist_neutral',
+					'whitelist_negativ',
+				),
+			),
 			'drop_tables'    => array(
 				$this->table_prefix . 'whitelist_ratings'
 			),
