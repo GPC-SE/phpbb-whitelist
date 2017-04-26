@@ -40,13 +40,13 @@ $lang = array_merge($lang, array(
 												<ul>
 													<li><span style="color: red">falsch: Trade mit ... Freund in der Schule / Geschwistern / Usern bei privaten Treffen / ...</span></li>
 													<li><div style="color: green">richtig:<ul>
-															<li>Über den <a href="community/viewforum.php?f=27">Pen-Trading-Bereich</a> organisierte Trades.</li>
-															<li>Trades auf Gatherings, die über den <a href="community/viewforum.php?f=25">Treffen / Gatherings-Bereich</a> organisiert wurden.</li></ul>
+															<li>Über den <a href="viewforum.php?f=27">Pen-Trading-Bereich</a> organisierte Trades.</li>
+															<li>Trades auf Gatherings, die über den <a href="viewforum.php?f=25">Treffen / Gatherings-Bereich</a> organisiert wurden.</li></ul>
 														</div>
 													</li>
 												</ul>
 											<li>Falsche Angaben führen von einem Abzug positiver Bewertungen über negativ Einträge bis hin zum Ausschluss.</li>
-											<li>Solltest du dich ungerecht bewertet fühlen, so wende dich bitte an einen Moderator des <a href="community/memberlist.php?mode=group&g=3" class="postlink" rel="nofollow"><span style="text-decoration: underline">Teams</span></a> und an deinen Tradepartner.</li>
+											<li>Solltest du dich ungerecht bewertet fühlen, so wende dich bitte an einen Moderator des <a href="memberlist.php?mode=group&g=3" class="postlink" rel="nofollow"><span style="text-decoration: underline">Teams</span></a> und an deinen Tradepartner.</li>
 											<li>Bedeutung der Ratings:
 												<ul><li><span style="color: green">positiv:</span> Alles reibungslos. - Guter Tradepartner</li>
 													<li><span style="color: grey">neutral:</span> Unstimmigkeiten, sehr lange auf Ware gewartet o.ä., aber alles geklärt.</li>
