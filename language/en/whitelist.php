@@ -40,13 +40,13 @@ $lang = array_merge($lang, array(
 												<ul>
 													<li><span style="color: red">wrong: Trades with ... friends in school / siblings / users on private meetings / ...</span></li>
 													<li><div style="color: green">right:<ul>
-															<li>Trades that are organized in the <a href="http://localhost/phpBB3/viewforum.php?f=27">Pen-Trading-Section</a>.</li>
-															<li>Trades on gatherings, that are organized in the <a href="http://localhost/phpBB3/viewforum.php?f=25">Treffen / Gatherings-Section</a>.</li></ul>
+															<li>Trades that are organized in the <a href="community/viewforum.php?f=27">Pen-Trading-Section</a>.</li>
+															<li>Trades on gatherings, that are organized in the <a href="community/viewforum.php?f=25">Treffen / Gatherings-Section</a>.</li></ul>
 														</div>
 													</li>
 												</ul>
 											<li>Incorrect ratings and false information can decrement positive ratings, increment negative ratings and could even lead to a ban.</li>
-											<li>If you think that you got a unfair rating, you should contact a moderator of our <a href="http://forum.penspinning.de/memberlist.php?mode=leaders" class="postlink" rel="nofollow"><span style="text-decoration: underline">team</span></a> and your tradepartner.</li>
+											<li>If you think that you got a unfair rating, you should contact a moderator of our <a href="community/memberlist.php?mode=group&g=3" class="postlink" rel="nofollow"><span style="text-decoration: underline">team</span></a> and your tradepartner.</li>
 											<li>Rate meanings:
 												<ul><li><span style="color: green">positive:</span> Everything good. No Problems. - Good Tradepartner</li>
 													<li><span style="color: grey">neutrale:</span> Disagreements, but everything has been clarified.</li>
