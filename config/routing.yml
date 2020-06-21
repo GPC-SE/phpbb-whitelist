@@ -1,4 +1,4 @@
 gpc_whitelist_controller:
-    pattern: /whitelist
+    path: /whitelist
     defaults: { _controller: gpc.whitelist.controller:show }
 

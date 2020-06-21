@@ -3,7 +3,7 @@
 	"type": "phpbb-extension",
 	"description": "Adds a whitelist for rating users +1/0/-1.",
 	"homepage": "http://www.penspinning.de",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"time": "2014-09-30",
 	"keywords": ["phpbb", "extension", "gpc", "whitelist"],
 	"license": "GPL-2.0",
@@ -21,7 +21,7 @@
 	"extra": {
 		"display-name": "GPC Whitelist",
 		"soft-require": {
-			"phpbb/phpbb": "3.2.*"
+			"phpbb/phpbb": "3.3.*"
 		}
 	}
 }
